@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/mItemTitle"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/mItemPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/img_rank4"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#fefefe"
+                android:textSize="6.5sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mItemName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="BTC"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mItemContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="CTC/USD"
+                    android:textColor="#999999"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@mipmap/yy"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <com.example.kenny.stickyexcel.customView.InterceptScrollContainer
+        android:id="@+id/scroollContainter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/textView1"
+        android:focusable="false">
+
+        <com.example.kenny.stickyexcel.customView.MyHScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mItemPrice"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:text="Column2"
+                    android:textColor="#266fb8"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/mItemChgTv"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:text="Column3"
+                    android:textColor="#266fb8"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/mItemVolum"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:text="Column4"
+                    android:textColor="#266fb8"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/mItemTime"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:text="Column5"
+                    android:textColor="#266fb8"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </com.example.kenny.stickyexcel.customView.MyHScrollView>
+    </com.example.kenny.stickyexcel.customView.InterceptScrollContainer>
+
+</LinearLayout>
